@@ -1,0 +1,287 @@
+/* general */
+
+:root {
+    --background: #FAFAFA;
+    --container: #FFF;
+    --border: #DBDBDB;
+    --text-primary: #262626;
+    --text-secondary: #8e8e8e;  
+    --text-button: #FFF;
+    --button: #4CB5F9;
+    --separator: #BBB;
+    --facebook: #385185;
+    --forgot-password: #373799;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    background-color: var(--background);
+}
+
+/* main */
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+/* banner */
+
+.banner-container {
+    flex: 1 1 0;
+    width: 50%;
+    text-align: right;
+}
+
+.banner-container img {
+    margin-right: -15px;
+}
+
+/* form */
+
+.form-container {
+    flex: 1 1 0;
+    width: 50%;
+    text-align: center;
+}
+
+.form-login {
+    background-color: var(--container);
+    border: 1px solid var(--border);
+    width: 350px;
+    margin-top: 30px;
+}
+
+.form-instagram-img {
+    width: 175px;
+    height: 51px;
+    margin: 30px auto 12px;
+}
+
+.form-login-input {
+    margin-top: 20px;
+}
+
+.form-login-input input {
+    display: block;
+    font-size: 12px;
+    padding: 12px 9px;
+    background-color: var(--container);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    width: 268px;
+    margin: 5px auto;
+    color: var(--text-primary);
+}
+
+.form-login-input input[type="submit"] {
+    background-color: var(--button);
+    color: var(--text-button);
+    margin-top: 15px;
+    border-radius: 8px;
+    border-color: var(--button);
+    height: 30px;
+    font-size: 13px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.form-login-input ::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-login-input input[type=text]:focus,
+.form-login-input input[type=password]:focus {
+    border: 1px solid var(--text-secondary);
+    outline-offset: 0px;
+    outline: none;
+}
+
+/* separator */
+
+.form-separator {
+    position: relative;
+}
+
+.form-separator-line {
+    border-top: 1px solid var(--border);
+    width: 268px;
+    margin: 25px auto 35px auto;
+}
+
+.form-separator span {
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--separator);
+    top: -6px;
+    width: 50px;
+    left: 50%;
+    margin-left: -25px;
+    font-size: 14px;
+}
+
+/* other links */
+
+.form-other-links a {
+    text-decoration: none;
+}
+
+.form-facebook-link {
+    margin-bottom: 25px;
+}
+
+.form-facebook-link a {    
+    color: var(--facebook);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-facebook-link img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.form-facebook-link span {
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+.form-forgot-password {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.form-forgot-password a {
+    color: var(--forgot-password);
+}
+
+/* sign up */
+
+.form-sign-up {
+    background-color: var(--container);
+    border: 1px solid var(--border);
+    width: 350px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+.form-sign-up p {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.form-sign-up a {
+    color: var(--button);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* get the app */
+
+.form-get-app {
+    text-align: center;
+    width: 350px;
+}
+
+.form-get-app p {
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--text-primary);
+}
+
+.form-get-app a {
+    text-decoration: none;
+}
+
+.form-get-app-img {
+    width: 136px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    width: 1000px;
+    margin: 50px auto;
+    font-size: 12px;
+}
+
+footer nav {
+    display: inline-block;
+}
+
+footer .footer-links {
+    list-style: none;
+}
+
+footer .footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;  
+}
+
+.footer-copyright {
+    color: var(--text-secondary);
+    margin-top: 20px;
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-container {
+        display: none;
+    }
+
+    .form-container {
+        width: auto;
+    }
+
+    footer {
+        width: 90%;
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+}
+
+/* mobile */
+
+@media (max-width: 450px) {
+
+    .main-container,
+    .form-login {
+        margin-top: 0;
+    }
+
+    .form-container,
+    .form-login,
+    .form-sign-up,
+    .form-get-app {
+        width: 100%;
+        border: none;
+    }
+
+}
